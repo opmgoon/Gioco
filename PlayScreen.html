@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <!--collegamenti tra html css e js-->
+    <link rel="stylesheet" href="PlayScreen.css">
+    
+    <title>Dance Dance revolution</title>
+</head>
+
+<body onkeyup="Punto(event)">
+    <!--frecce mobili-->
+    <img id="fSu" src="fSu.png" class="fSu">
+    <img id="fDx" src="fDx.png" class="fDx">
+    <img id="fSx" src="fSx.png" class="fSx">
+    <img id="fGu" src="fGu.png" class="fGu">
+    
+    <!--frecce fisse-->
+    <img id="fSuF" src="fSuF.png" class="fSuF">
+    <img id="fDxF" src="fDxF.png" class="fDxF">
+    <img id="fSxF" src="fSxF.png" class="fSxF">
+    <img id="fGuF" src="fGuF.png" class="fGuF">
+
+    <!--vite-->
+    <img id="Vita1" src="Vita.png" class="Vita1">
+    <img id="Vita2" src="Vita.png" class="Vita2">
+    <img id="Vita3" src="Vita.png" class="Vita3">
+
+    <!--punteggio-->
+    <div class="ScoreCont">
+        <p id="Score" class="Score">SCORE: 0</p>
+    </div>
+
+    <button id="Diff1" class="Diff1" onclick="Difficoltà1(); scegliFreccia()">Facile</button>
+    <button id="Diff2" class="Diff2" onclick="Difficoltà2(); scegliFreccia()">Medio</button>
+    <button id="Diff3" class="Diff3" onclick="Difficoltà3(); scegliFreccia()">Difficile</button>
+
+    <!--pausa/riprendi-->
+    <img id="Pausa" src="Stop.png" class="Pausa" onclick="Pause()">
+    <img id="Riprendi" src="Riprendi.png" class="Riprendi" onclick="Unpause()">
+
+    <!--volume/muto-->
+    <img id="Mute" src="Mute.png" class="Mute" onclick="Muta()">
+    <img id="Unmute" src="Unmute.png" class="Unmute" onclick="Unmuta()">
+
+    <div class="box">
+        <a class="button" href="#popup1" id="button" onclick="PopUp()"></a>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>GAME OVER</h2>
+            <p id="scorepopup" class="scorepopup"></p>
+            <a id="close" class="close" href="#"></a>
+            <div class="content">
+                <p id=""></p>
+                <div class="sub-main">
+                    <button class="button-three" onclick="PlayAgain()">Play Again</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="Gioco.js"></script>
+</body>
+
+</html>
